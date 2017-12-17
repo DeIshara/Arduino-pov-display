@@ -4,7 +4,6 @@ int pin[10],first,second,temp,tm1=0,last=0;
 unsigned long int time;
 int sec=0,mn=9,hr=2;
 
-
 void setup() {
   for(int i=2;i<12;i++){
     pin[i-2]=13-i;
@@ -13,7 +12,6 @@ void setup() {
     pinMode(pin[i],OUTPUT);
   }
   Serial.begin(9600);
-
 }
 
 byte nn[10][10]={{0,0,0,0,0,0,0,0,0,0},
@@ -181,7 +179,6 @@ byte p[10][10]={{0,0,0,0,0,0,0,0,0,0},
                 {0,0,1,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0,0,0}};
 
-
 void loop() {
   analogread=analogRead(A7);
   time=millis()/1000;
@@ -207,7 +204,6 @@ void loop() {
     hr=1;
   }
   //Serial.println(tm1);
-  
   /*Serial.print(hr);
   Serial.print(" ");
   Serial.print(mn);
@@ -219,15 +215,12 @@ void loop() {
       //draw(nn);
     }
     pm();
-    
     drawNumber(sec);
     colon(time);
     drawNumber(mn);
     colon(time);
     drawNumber(hr);
-
     }
-  
 }
 
 void drawNumber(int n){
